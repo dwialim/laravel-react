@@ -1,4 +1,5 @@
 import { React, useCallback } from 'react'
+import { Link } from 'react-router-dom'
 
 function Sidebar() {
 	const handleClick = useCallback(e => {e.preventDefault()})
@@ -17,23 +18,24 @@ function Sidebar() {
 			</div>
 			<ul className="metismenu" id="menu">
 				<li>
-					<a href="#" onClick={handleClick} className="has-arrow">
+					<Link to="/">
+						<div className="parent-icon"><i className='bx bx-home-circle'></i></div>
+						<div className="menu-title">Dashboard</div>
+					</Link>
+					{/* <a href="#" onClick={handleClick} className="has-arrow">
 						<div className="parent-icon"><i className='bx bx-home-circle'></i>
 						</div>
 						<div className="menu-title">Dashboard</div>
 					</a>
 					<ul>
-						<li><a href="index.html"><i className="bx bx-right-arrow-alt"></i>Default</a></li>
-					</ul>
+						<li><Link to="/"><i className="bx bx-right-arrow-alt"></i>Default</Link></li>
+					</ul> */}
 				</li>
 				<li>
-					<a href="#" onClick={handleClick} className="has-arrow">
+					<Link to="admin/list">
 						<div className="parent-icon"><i className="bx bx-category"></i></div>
-						<div className="menu-title">Application</div>
-					</a>
-					<ul>
-						<li><a href="app-emailbox.html"><i className="bx bx-right-arrow-alt"></i>Email</a></li>
-					</ul>
+						<div className="menu-title">Admin</div>
+					</Link>
 				</li>
 				<li className="menu-label">UI Elements</li>
 			</ul>
