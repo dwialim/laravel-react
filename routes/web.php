@@ -12,7 +12,9 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+Route::get('assets/{path}', function ($path) {
+	return response()->file(public_path("assets/$path"));
+});
 Route::get('/{any?}/{slug?}', function () {
 	return view('welcome');
 });

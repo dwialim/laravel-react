@@ -1,7 +1,9 @@
 import React, {useCallback} from 'react'
 
-function Header() {
+function Header(data = {}) {
 	const handleClick = useCallback(e => {e.preventDefault()})
+	const assets = '/assets/images/avatars/'
+	const avatars = data.assets.avatars || ''
 
 	return (
 		<header>
@@ -191,7 +193,7 @@ function Header() {
 										<a className="dropdown-item" href="#" onClick={handleClick}>
 											<div className="d-flex align-items-center">
 												<div className="user-online">
-													<img src="assets/images/avatars/avatar-1.png" className="msg-avatar" alt="user avatar"/>
+													<img src={`${avatars}avatar-1.png`} className="msg-avatar" alt="user avatar"/>
 												</div>
 												<div className="flex-grow-1">
 													<h6 className="msg-name">Daisy Anderson <span className="msg-time float-end">5 sec
@@ -203,7 +205,7 @@ function Header() {
 										<a className="dropdown-item" href="#" onClick={handleClick}>
 											<div className="d-flex align-items-center">
 												<div className="user-online">
-													<img src="assets/images/avatars/avatar-2.png" className="msg-avatar" alt="user avatar"/>
+													<img src={`${avatars}avatar-2.png`} className="msg-avatar" alt="user avatar"/>
 												</div>
 												<div className="flex-grow-1">
 													<h6 className="msg-name">Althea Cabardo <span className="msg-time float-end">14
@@ -215,7 +217,7 @@ function Header() {
 										<a className="dropdown-item" href="#" onClick={handleClick}>
 											<div className="d-flex align-items-center">
 												<div className="user-online">
-													<img src="assets/images/avatars/avatar-3.png" className="msg-avatar" alt="user avatar"/>
+													<img src={`${avatars}avatar-3.png`} className="msg-avatar" alt="user avatar"/>
 												</div>
 												<div className="flex-grow-1">
 													<h6 className="msg-name">Oscar Garner <span className="msg-time float-end">8 min
@@ -227,7 +229,7 @@ function Header() {
 										<a className="dropdown-item" href="#" onClick={handleClick}>
 											<div className="d-flex align-items-center">
 												<div className="user-online">
-													<img src="assets/images/avatars/avatar-4.png" className="msg-avatar" alt="user avatar"/>
+													<img src={`${avatars}avatar-4.png`} className="msg-avatar" alt="user avatar"/>
 												</div>
 												<div className="flex-grow-1">
 													<h6 className="msg-name">Katherine Pechon <span className="msg-time float-end">15
@@ -239,7 +241,7 @@ function Header() {
 										<a className="dropdown-item" href="#" onClick={handleClick}>
 											<div className="d-flex align-items-center">
 												<div className="user-online">
-													<img src="assets/images/avatars/avatar-5.png" className="msg-avatar" alt="user avatar"/>
+													<img src={`${avatars}avatar-5.png`} className="msg-avatar" alt="user avatar"/>
 												</div>
 												<div className="flex-grow-1">
 													<h6 className="msg-name">Amelia Doe <span className="msg-time float-end">22 min
@@ -251,7 +253,7 @@ function Header() {
 										<a className="dropdown-item" href="#" onClick={handleClick}>
 											<div className="d-flex align-items-center">
 												<div className="user-online">
-													<img src="assets/images/avatars/avatar-6.png" className="msg-avatar" alt="user avatar"/>
+													<img src={`${avatars}avatar-6.png`} className="msg-avatar" alt="user avatar"/>
 												</div>
 												<div className="flex-grow-1">
 													<h6 className="msg-name">Cristina Jhons <span className="msg-time float-end">2 hrs
@@ -263,7 +265,7 @@ function Header() {
 										<a className="dropdown-item" href="#" onClick={handleClick}>
 											<div className="d-flex align-items-center">
 												<div className="user-online">
-													<img src="assets/images/avatars/avatar-7.png" className="msg-avatar" alt="user avatar"/>
+													<img src={`${avatars}avatar-7.png`} className="msg-avatar" alt="user avatar"/>
 												</div>
 												<div className="flex-grow-1">
 													<h6 className="msg-name">James Caviness <span className="msg-time float-end">4 hrs
@@ -275,7 +277,7 @@ function Header() {
 										<a className="dropdown-item" href="#" onClick={handleClick}>
 											<div className="d-flex align-items-center">
 												<div className="user-online">
-													<img src="assets/images/avatars/avatar-8.png" className="msg-avatar" alt="user avatar"/>
+													<img src={`${avatars}avatar-8.png`} className="msg-avatar" alt="user avatar"/>
 												</div>
 												<div className="flex-grow-1">
 													<h6 className="msg-name">Peter Costanzo <span className="msg-time float-end">6 hrs
@@ -287,7 +289,7 @@ function Header() {
 										<a className="dropdown-item" href="#" onClick={handleClick}>
 											<div className="d-flex align-items-center">
 												<div className="user-online">
-													<img src="assets/images/avatars/avatar-9.png" className="msg-avatar" alt="user avatar"/>
+													<img src={`${avatars}avatar-9.png`} className="msg-avatar" alt="user avatar"/>
 												</div>
 												<div className="flex-grow-1">
 													<h6 className="msg-name">David Buckley <span className="msg-time float-end">2 hrs
@@ -299,7 +301,7 @@ function Header() {
 										<a className="dropdown-item" href="#" onClick={handleClick}>
 											<div className="d-flex align-items-center">
 												<div className="user-online">
-													<img src="assets/images/avatars/avatar-10.png" className="msg-avatar" alt="user avatar"/>
+													<img src={`${avatars}avatar-10.png`} className="msg-avatar" alt="user avatar"/>
 												</div>
 												<div className="flex-grow-1">
 													<h6 className="msg-name">Thomas Wheeler <span className="msg-time float-end">2 days
@@ -311,7 +313,7 @@ function Header() {
 										<a className="dropdown-item" href="#" onClick={handleClick}>
 											<div className="d-flex align-items-center">
 												<div className="user-online">
-													<img src="assets/images/avatars/avatar-11.png" className="msg-avatar" alt="user avatar"/>
+													<img src={`${avatars}avatar-11.png`} className="msg-avatar" alt="user avatar"/>
 												</div>
 												<div className="flex-grow-1">
 													<h6 className="msg-name">Johnny Seitz <span className="msg-time float-end">5 days
@@ -330,7 +332,7 @@ function Header() {
 					</div>
 					<div className="user-box dropdown">
 						<a className="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							<img src="assets/images/avatars/avatar-2.png" className="user-img" alt="user avatar"/>
+							<img src={`${avatars}avatar-2.png`} className="user-img" alt="user avatar"/>
 							<div className="user-info ps-3">
 								<p className="user-name mb-0">Pauline Seitz</p>
 								<p className="designattion mb-0">Web Designer</p>

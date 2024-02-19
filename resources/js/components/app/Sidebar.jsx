@@ -1,14 +1,15 @@
 import { React, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 
-function Sidebar() {
+function Sidebar(data={}) {
 	const handleClick = useCallback(e => {e.preventDefault()})
+   const images = data.assets.images || ''
 
 	return (
 		<div className="sidebar-wrapper" data-simplebar="true">
 			<div className="sidebar-header">
 				<div>
-					<img src="assets/images/logo-icon.png" className="logo-icon" alt="logo icon"/>
+					<img src={`${images}logo-icon.png`} className="logo-icon" alt="logo icon"/>
 				</div>
 				<div>
 					<h4 className="logo-text">Rukada</h4>
@@ -37,7 +38,7 @@ function Sidebar() {
 						<div className="menu-title">Admin</div>
 					</Link>
 				</li>
-				<li className="menu-label">UI Elements</li>
+				{/* <li className="menu-label">UI Elements</li> */}
 			</ul>
 		</div>
 	)
