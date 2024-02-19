@@ -3,9 +3,9 @@ import laravel from 'laravel-vite-plugin';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-   // build: {
-   //    outDir: 'build'
-   // },
+	// build: {
+	//    outDir: 'build'
+	// },
 	plugins: [
 		react(),
 		laravel({
@@ -13,4 +13,9 @@ export default defineConfig({
 			refresh: true,
 		}),
 	],
+	server: {
+		hmr: {
+			host: 'localhost',
+		},
+	},
 });
